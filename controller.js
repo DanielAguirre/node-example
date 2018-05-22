@@ -12,17 +12,17 @@ const controller = {
     },
     paramsID:(req, res, next) =>{
         console.log('id',req.app)
-        req.app.locals.id = req.params.id
+        res.locals.id = req.params.id
         next()
     },
     getParams:(req, res) =>{
         res.json({
-            msg:`your in / ${req.app.locals.id}`
+            msg:`your in / ${res.locals.id}`
             })
     },
     postParams:(req, res) =>{
         res.json({
-            msg:`your in param /${req.app.locals.id}`,
+            msg:`your in param /${res.locals.id}`,
             q: `query ${req.query.next}`,
             body:req.body.x
         })
