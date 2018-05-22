@@ -10,8 +10,7 @@ const controller = {
             })
         }
     },
-    paramsID:(req, res, next) =>{
-        console.log('id',req.app)
+    paramsID:(req, res, next) => {
         res.locals.id = req.params.id
         next()
     },
@@ -26,7 +25,7 @@ const controller = {
             q: `query ${req.query.next}`,
             body:req.body.x
         })
-    }  
+    }
 }
 
 module.exports = controller;
