@@ -26,7 +26,7 @@ const userController = {
             })
         })
     },
-    getUser:(req, res) => {
+    getUser:(req, res) => {    
         userModel.findAll({}).then(response => {
             res.json({
                 response
