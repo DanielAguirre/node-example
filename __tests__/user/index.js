@@ -15,7 +15,7 @@ let user = {
 }
 
 describe('User', () => {
-    beforeEach(() =>{
+    beforeEach((done) =>{
         
 
         mockgoose.prepareStorage().then(function() {
